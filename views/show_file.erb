@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>File has been uploaded</title>
   <style>
-    h1 {
+    h1, h1 a {
       color: #00AA55;
     }
     body {
@@ -27,10 +27,10 @@
   </style>
 </head>
 <body>
-  <h1>File Has Been Uploaded</h1>
+  <h1><a href="/">File Has Been Uploaded</a></h1>
   <dl>
     <dt>File Link</dt>
-    <dd><a href="<%= full_address %>"><%= full_address %></a></dd>
+    <dd><input type="text" value="<%= full_address %>" readonly="true" onclick="this.select();" size="70" id="link" /></dd>
 
     <% if ['.jpg', '.png', '.gif'].include?(full_address[-4,4]) %>
     <dt>Image Preview</dt>
