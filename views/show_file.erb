@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>File has been uploaded</title>
+  <style>
+    h1 {
+      color: #00AA55;
+    }
+    body {
+      font-size: 14px;
+      font-family: Calibri, Arial, Helvetica;
+      text-align: center;
+      margin-top: 90px;
+    }
+    footer {
+      display: block;
+      margin-top: 35px;
+      color: gray;
+    }
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+  <h1>File Has Been Uploaded</h1>
+  <dl>
+    <dt>File Link</dt>
+    <dd><a href="<%= full_address %>"><%= full_address %></a></dd>
+
+    <% if ['.jpg', '.png', '.gif'].include?(full_address[-4,4]) %>
+    <dt>Image Preview</dt>
+    <dd><img src="<%= full_address %>" /></dd>
+
+    <dt>Image for Forums</dt>
+    <dd>[img]<%=full_address%>[/img]
+    <% end %>
+
+    <dt>Link for Forums</dt>
+    <dd>[url=<%=full_address%>]link description here[/url]</dd>
+  </dl>
+  <footer>
+	  &copy; 2011 Nikita Baksalyar
+  </footer>
+</body>
+</html>
+
