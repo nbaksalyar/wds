@@ -12,8 +12,7 @@ $fog     = Fog::Storage.new(
 
 get '/file' do
   status 201; headers "Cache-Control" => "no-cache"
-  filename = params[:name]
-  erb :show_file, :locals => { :full_address => 'http://' + $bucket + '.s3-' + $region + '.amazonaws.com/' + filename }
+  erb :show_file, :locals => { :full_address => 'http://' + $bucket + '.s3-' + $region + '.amazonaws.com/' + params[:name] }
 end
 
 post '/upload' do
