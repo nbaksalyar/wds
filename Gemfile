@@ -1,2 +1,2 @@
 gem 'sinatra'
-gem 'fog', '0.8.2'
+gem 'aws-s3', '0.6.2'
