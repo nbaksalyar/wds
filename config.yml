@@ -1,3 +1,4 @@
 bucket: unknown
 access_key_id:
 secret_access_key:
+region: s3-eu-west-1

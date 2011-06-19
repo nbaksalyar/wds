@@ -14,8 +14,9 @@ GEM
     xml-simple (1.1.0)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
-  aws-s3 (= 0.6.2)
+  aws-s3
   sinatra
